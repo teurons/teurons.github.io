@@ -1,0 +1,22 @@
+# .github/workflows/deploy.yml
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site
+        run: npm i pnpm --global && pnpm i && pnpm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: locospec.com
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./out/
+          branch: gh-pages
+          clean-exclude: pr-preview
+          force: true
+          clean: true

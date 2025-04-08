@@ -1,0 +1,6 @@
+### Generate Commit Message Guidelines
+
+- Must Include type in title like fix: or feat: or docs: etc
+- Do not include full file paths in commit messages
+- Must Include title: which is a small sentence summarizing changes
+- Must Include body: which is a list of changes
