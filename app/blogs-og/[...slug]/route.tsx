@@ -6,7 +6,7 @@ export const GET = blogsMetaImage.createAPI((page: any): ImageResponse => {
   return generateOGImage({
     title: page.data.title,
     description: page.data.description,
-    site: "locospec",
+    site: "teurons",
   });
 });
 

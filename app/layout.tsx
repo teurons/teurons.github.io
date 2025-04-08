@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata = createMetadata({
   title: {
     template: "%s | locospec",
-    default: "locospec",
+    default: "teurons",
   },
   description: description,
   metadataBase: baseUrl,
